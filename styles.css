@@ -1,0 +1,297 @@
+ body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background:#F5F7F8 ;
+        }
+        .navbar {
+            background: /*#366ED8*//*E1E1E1*/#0F52BA;
+            box-shadow: 2px 0 5px rgba(0,0,0,1.0);
+            /* background: linear-gradient(to left,#E1E1E1,#6AD4DD);*/
+        }
+        .navbar a {
+            font-weight: 700;
+            color: #000;
+        }
+        .sidebar {
+            background:#F8F9FA/*#F3CBD4*/;
+
+            width: 250px;
+            position: absolute;
+            top: 56px; /* Height of the navbar */
+            left: 0; /* Hidden by default */
+            height: calc(100% - 56px);
+            transition: left 0.3s ease;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+            padding: 15px;
+            z-index: 1;
+        }
+        .sidebar.active {
+            left: -250px; /* Show sidebar */
+        }
+        /*.sidebar ul li:hover{
+        	padding-left: 20px;
+        	margin: 10px;
+        	background: #e1e1e1;
+        }*/
+        /*hover arrow*/
+        /*.sidebar ul li::before
+        {
+        	content:'';
+        	position: absolute;
+        	top: 50%;
+        	background: blue;
+        	transform:translateY(-50%);
+        }*/
+        
+        .sidebar ul li {
+    position: relative; /* Needed for the pseudo-element */
+    overflow: hidden; /* To prevent overflow of the arrow */
+    transition: background 0.3s; /* Smooth transition for background */
+}
+
+.sidebar ul li:hover {
+    background: #e1e1e1; /* Change background color on hover */
+}
+.sidebar ul li a.active
+{
+    background: #e1e1e1;
+    color: #fff;
+}
+
+.sidebar ul li::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Position the arrow */
+    top: 50%; /* Center vertically */
+    width: 0; /* Start with no width */
+    height: 0; /* Start with no height */
+    border-left: 10px solid transparent; /* Left side of the arrow */
+    border-right: 10px solid transparent; /* Right side of the arrow */
+    border-top: 10px solid #e1e1e1; /* Color of the arrow */
+    transition: all 0.3s; /* Smooth transition for the arrow */
+    transform: translateY(-50%) translateX(-100%); /* Center the arrow */
+}
+
+.sidebar ul li:hover::after {
+    width: 20px; /* Width of the arrow */
+    height: 20px; /* Height of the arrow */
+    transform: translateY(-50%) translateX(-100%); /* Positioning */
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Add some padding for better spacing */
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.sidebar a:hover {
+    color:#366ED8; /* Change text color on hover */
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.sidebar a img {
+    margin-right: 10px;
+    transition: transform 0.3s; /* Smooth transition for the icon */
+}
+
+.sidebar ul li:hover a img {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+        footer {
+            background: #E1E1E1;
+            line-height: 40px;
+            margin-top: auto; /* Push footer to the bottom */
+            box-shadow: 2px 0 5px rgba(0,0,0,1.0);
+            z-index: 0;
+        }
+        .toggle-button {
+            cursor: pointer;
+            /*background: #EEF5FF;*/
+            background: transparent;
+        }
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.btn1{
+    color: #fff;
+    background: #F5004F;
+    width: 100px;
+    height: 50px;
+    border:none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.btn1:hover{
+    box-shadow: 0 0 10px rgba(245,0,79, 1.0);
+}
+.btn2{
+    color: #fff;
+    background: #4CC9FE;
+    width: 100px;
+    height: 50px;
+    border:none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.btn2:hover{
+    box-shadow: 0 0 10px rgba(76,201,254, 1.0);
+}
+.card{
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+.card:hover
+{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(54, 110, 216, 2.0);
+}
+.button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 6px;
+    color: #fff;
+    font-weight: 500;
+    background: #A85CF9;
+}
+.button1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 6px;
+    color: #fff;
+    width: 200px;
+    font-weight: 500;
+    background: #F95454;
+}
+.repaymentlist{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 6px;
+    color: #fff;
+    width: 200px;
+    font-weight: 500;
+    background: #F95454;
+}
+.button2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 6px;
+    color: #fff;
+    width: 100px;
+    font-weight: 500;
+    background: #2c73de;
+}
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+.cardtable {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.card-bodytable {
+  padding: 20px;
+}
+
+.card-titletable {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-subtitletable {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card-texttable {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.delete {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 100px;
+  cursor: pointer;
+}
+.delete:hover
+{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1.0);
+}
+.edit:hover{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1.0);
+}
+
+.edit {
+  background-color: transparent;
+  color: #fff;
+  width: 100px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete img, .edit img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.rupee-input {
+            position: relative;
+            display: inline-block;
+        }
+        .rupee-input input {
+            padding-left: 20px; /* Space for the rupee sign */
+        }
+        .rupee-input::before {
+            content: '₹'; /* Indian Rupee symbol */
+            position: absolute;
+            left: 5px; /* Position of the rupee sign */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+.table-responsive{
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+        @media (max-width: 768px) {
+            .sidebar {
+                position: absolute;
+                left: -250px; /* Hide by default on small screens */
+            }
+            .sidebar.active {
+                left: 0; /* Show sidebar on toggle */
+            }
+        }
