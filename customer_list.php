@@ -53,8 +53,8 @@ $result = $conn->query($sql);
                             City:&nbsp;' . htmlspecialchars($row["city"]) . '<br>
                             State:&nbsp;' . htmlspecialchars($row["state"]) . '<br>
                             Pincode:&nbsp;' . htmlspecialchars($row["pincode"]) . '</p>
-                            <button class="delete"><img src="./images/trash-regular-24.png"></button>
-                            <button class="edit"><img src="./images/edit-solid-24.png"></button>
+                            <button class="delete"><img src="./images/icons8-trash-24.png"></button>
+                            <button class="edit"><img src="./images/icons8-edit-24.png"></button>
                         </div>
                     </div>';
                 }

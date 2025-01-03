@@ -51,8 +51,8 @@ $result = $conn->query($sql);
                             Aadhar No:&nbsp;' . htmlspecialchars($row["aadhar"]) . '<br>
                             Pan No:&nbsp;' . htmlspecialchars($row["pancard"]) . '<br>
                             Accounttype:&nbsp;' . htmlspecialchars($row["accounttype"]) . '<br></p>
-                            <button class="delete"><img src="./images/trash-regular-24.png"></button>
-                            <button class="edit"><img src="./images/edit-solid-24.png"></button>
+                            <button class="delete"><img src="./images/icons8-trash-24.png"></button>
+                            <button class="edit"><img src="./images/icons8-edit-24.png"></button>
                         </div>
                     </div>';
                 }

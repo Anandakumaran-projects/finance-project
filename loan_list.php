@@ -54,8 +54,8 @@ $result = $conn->query($sql);
                             Interest:&nbsp;' . htmlspecialchars($row["interest"]) . '<br>
                             Tenure:&nbsp;' . htmlspecialchars($row["tenure"]) . '<br>
                             Monthly Payable:&nbsp; ₹&nbsp;' . htmlspecialchars($row["payableamount"]) . '</p>
-                            <button class="delete"><img src="./images/trash-regular-24.png"></button>
-                            <button class="edit"><img src="./images/edit-solid-24.png"></button>
+                            <button class="delete"><img src="./images/icons8-trash-24.png"></button>
+                            <button class="edit"><img src="./images/icons8-edit-24.png"></button>
                         </div>
                     </div>';
                 }

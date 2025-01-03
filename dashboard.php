@@ -94,7 +94,7 @@ $conn->close();
             <div class="row" style="display: flex; flex-direction: row;justify-content:space-evenly;">
             <div class="card" style="width:250px; height: 150px;">
   <div class="card-body">
-    <h5 class="card-title"><img src="./images/icons8-customer-24.png"></h5>
+    <h5 class="card-title"><img src="./images/icons8-user-24.png"></h5>
     <h6 class="card-subtitle mb-2 text-body-secondary">No of Customers</h6>
     <p class="card-text"><?php echo $totalEntries;?></p>
   </div>
@@ -108,20 +108,20 @@ $conn->close();
 </div>
 <div class="card" style="width:250px; height: 150px;">
   <div class="card-body">
-    <h5 class="card-title"><img src="./images/icons8-fund-24.png"></h5>
+    <h5 class="card-title"><img src="./images/icons8-money-bag-24.png"></h5>
     <h6 class="card-subtitle mb-2 text-body-secondary">No Of Loans</h6>
     <p class="card-text"><?php echo $totalloan;?></p>
   </div>
 </div>
 <div class="card" style="width:250px; height: 150px;">
   <div class="card-body">
-    <h5 class="card-title"><img src="./images/icons8-money-bag-pounds-24.png"></h5>
+    <h5 class="card-title"><img src="./images/icons8-rupee-24.png"></h5>
     <h6 class="card-subtitle mb-2 text-body-secondary">Income</h6>
     <p class="card-text" style="color: darkgreen;font-weight: bold;">₹<?php echo $totalincome;?></p>
   </div>
 </div>
 </div>
-<h3 style="margin-top:20px;text-align:center;">Today Account Status</h3>
+<!-- <h3 style="margin-top:20px;text-align:center;">Today Account Status</h3> -->
 <div class="table-responsive">
 
 <table id="myTable" class="display">

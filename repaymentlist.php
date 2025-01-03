@@ -23,6 +23,7 @@
                         <th>Paid</th>
                         <th>Paid Date</th>
                         <th>Balance</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,7 +32,7 @@
                     include './php/dbconnection.php'; // Ensure this file handles your database connection
 
                     // Fetch all repayment records
-                    $query = "SELECT customerid, customername, loanno,  totalpayable, paidamount, paiddate, balancepayable FROM repayment";
+                    $query = "SELECT customerid, customername, loanno,  totalpayable, paidamount, paiddate, balancepayable,closedloan FROM repayment";
                     $result = $conn->query($query);
 
                     // Check if the query was successful
@@ -42,22 +43,30 @@
                         // Check if there are results
                         if ($result->num_rows > 0) {
                             // Output data of each row
-                            while ($row = $result->fetch_assoc()) {
-                                echo "<tr>
-                                        <td>{$row['customerid']}</td>
-                                        <td>{$row['customername']}</td>
-                                        <td>{$row['loanno']}</td>
-                                        
-                                        <td> ₹ {$row['totalpayable']}</td>
-                                        <td> ₹ {$row['paidamount']}</td>
-                                        <td>{$row['paiddate']}</td>
-                                        <td> ₹ {$row['balancepayable']}</td>
-                                      </tr>";
-                            }
+                            while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row['customerid']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['customername']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['loanno']) . "</td>";
+                        echo "<td> ₹ " . htmlspecialchars($row['totalpayable']) . "</td>";
+                        echo "<td> ₹ " . htmlspecialchars($row['paidamount']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['paiddate']) . "</td>";
+                        echo "<td> ₹ " . htmlspecialchars($row['balancepayable']) . "</td>";
+
+                        
+                        // Check the value of closedloan
+                        if ($row['closedloan'] === 'opened') {
+                            // If the value is 'opened', set the text color to green
+                            echo "<td style='color:green;font-weight:bold;'>" . htmlspecialchars($row['closedloan']) . "</td>";
                         } else {
-                            echo "<tr><td colspan='8'>No records found</td></tr>";
+                            // Otherwise, set the text color to red
+                            echo "<td style='color:red;font-weight:bold;'>" . htmlspecialchars($row['closedloan']) . "</td>";
                         }
+                        
+                        echo "</tr>";
                     }
+                }
+            }
 
                     // Close the database connection
                     $conn->close();

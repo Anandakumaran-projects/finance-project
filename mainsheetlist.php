@@ -14,6 +14,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Outcome</th>
+                        <th>Name</th>
                         <th>Income</th>
                         <th>Balance</th>
                     </tr>
@@ -24,7 +25,7 @@
                     include './php/dbconnection.php'; // Ensure this file handles your database connection
 
                     // Fetch all repayment records
-                    $query = "SELECT id, loanamount, paidamount, newbalance FROM mainbalance";
+                    $query = "SELECT id, loanamount,customername, paidamount, newbalance FROM mainbalance";
                     $result = $conn->query($query);
 
                     // Check if the query was successful
@@ -40,6 +41,7 @@
                                 echo "<tr>
                                         <td>{$row['id']}</td>
                                         <td style='color:red; font-weight:bold;'>- ₹ {$row['loanamount']}</td>
+                                        <td >{$row['customername']}</td>
                                         <td style='color:darkgreen;font-weight:bold;'>+ ₹ {$row['paidamount']}</td>
                                         <td style='color:blue;font-weight:bold;'> ₹ {$row['newbalance']}</td>
                                       </tr>";

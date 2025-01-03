@@ -35,16 +35,26 @@
                         die("Query failed: " . mysqli_error($conn));
                     }
 
-                    while ($row = mysqli_fetch_assoc($result)) {
+                   while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
                         echo "<td>" . htmlspecialchars($row['customerid']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['customername']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['loanno']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['totalpayable']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['balancepayable']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['closedloan']) . "</td>";
+                        
+                        // Check the value of closedloan
+                        if ($row['closedloan'] === 'opened') {
+                            // If the value is 'opened', set the text color to green
+                            echo "<td style='color:green;font-weight:bold;'>" . htmlspecialchars($row['closedloan']) . "</td>";
+                        } else {
+                            // Otherwise, set the text color to red
+                            echo "<td style='color:red;font-weight:bold;'>" . htmlspecialchars($row['closedloan']) . "</td>";
+                        }
+                        
                         echo "</tr>";
                     }
+
 
                     mysqli_close($conn);
                     ?>

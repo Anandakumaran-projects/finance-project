@@ -30,15 +30,16 @@
     <nav class="sidebar" id="sidebar-hidden">
         <ul class="list-unstyled">
             <li><a href="dashboard.php" class="active"><img src="./images/icons8-dashboard-layout-24.png" alt="Dashboard icon">Dashboard</a></li>
-            <li><a href="newcustomer.php"><img src="./images/icons8-customer-24.png" alt="New Customer icon">New Customer</a></li>
+            <li><a href="newcustomer.php"><img src="./images/icons8-user-24.png" alt="New Customer icon">New Customer</a></li>
             <li><a href="newaccount.php"><img src="./images/icons8-bank-account-24.png" alt="New Account icon">New Account</a></li>
             <li><a href="customer_list.php"><img src="./images/icons8-list-24.png" alt="Customer List icon">Customer List</a></li>
             <li><a href="Account_list.php"><img src="./images/icons8-list-24.png" alt="Account List icon">Account Lists</a></li>
-            <li><a href="loan.php"><img src="./images/icons8-fund-24.png" alt="Loan icon">Apply For Loan</a></li>
+            <li><a href="loan.php"><img src="./images/icons8-money-bag-24.png" alt="Loan icon">Apply For Loan</a></li>
             <li><a href="loan_list.php"><img src="./images/icons8-list-24.png" alt="Loan List icon">Loan Lists</a></li>
-            <li><a href="repayment.php"><img src="./images/icons8-transaction-24.png" alt="Outstanding icon">Loan Repayment</a></li>
+            <li><a href="repayment.php"><img src="./images/icons8-repayment-24.png" alt="Outstanding icon">Loan Repayment</a></li>
             <li><a href="repaymentlist.php"><img src="./images/icons8-list-24.png" alt="Loan List icon">Repayment Lists</a></li>
             <!-- <li><a href=""><img src="./images/icons8-analytics-24.png" alt="Loan List icon">Report & Analytics</a></li> -->
+            <li><a href="report.php"><img src="./images/icons8-report-24.png" alt="Closed Loan icon">Customer Report</a></li>
             <li><a href="closedloan.php"><img src="./images/icons8-closed-24.png" alt="Closed Loan icon">Closed Loans</a></li>
         </ul>
     </nav>
